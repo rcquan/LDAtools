@@ -239,9 +239,7 @@ preprocess <- function(data, exact=NULL, partial=NULL, subs=NULL,
   # caused the document to contain zero tokens in the vocabulary:
   category[category == 0][(1:D) %in% unique(doc.id) == FALSE] <- -1
   if (!quiet) {
-  	cat(paste0("\n", sum(category == -1), " additional documents removed "
-  	           "because they consisted entirely of punctuation or rare "
-  	           "terms that are not in the vocabulary."))
+  	cat(paste0("\n", sum(category == -1), " additional documents remove because they consisted entirely of punctuation or rare terms that are not in the vocabulary."))
   }
   
   # every document must have at least one token in the vocabulary:
